@@ -16,7 +16,11 @@ export default class Profile extends React.Component {
 
   componentDidMount() {
     Meteor.call('getLoggedInUserInfo', (err, resp) => {
-        if (!err) {
+        if (!!err) {
+          this.setState({
+              error: err.error
+          });
+        } else {
           this.setState({
             firstName: resp.profile.firstName,
             email: resp.emails[0].address
