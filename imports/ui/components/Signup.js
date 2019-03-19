@@ -51,9 +51,10 @@ export default class Signup extends React.Component {
           <h1>Join</h1>
           {this.state.error ? <p>{this.state.error}</p> : null}
           <form onSubmit={this.onSubmit.bind(this)} noValidate>
-            <input type="email" name="email" ref="email" placeholder="Email" /><br/><br/>
-            <input type="text" name="firstName" ref="firstName" placeholder="First Name"/><br/><br/>
-            <input type="password" name="password" ref="password" placeholder="Password" /><br/><br/>
+            <input type="email" name="email" ref="email" placeholder="Email" /><br/>
+            <input type="password" name="password" ref="password" placeholder="Password"/><br/>
+            <input type="text" name="firstName" ref="firstName" placeholder="First Name"/><br/>
+            <input type="text" name="lastName" ref="lastName" placeholder="Last Name"/><br/><br/>
             <input type="submit" value="Create Account"/>
           </form>
           <p>Already have account? <Link to="/">Login here.</Link></p>

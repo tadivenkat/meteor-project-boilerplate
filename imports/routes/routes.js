@@ -7,6 +7,7 @@ import Dashboard from '../ui/components/Dashboard';
 import Login from '../ui/components/Login';
 import NotFound from '../ui/components/NotFound';
 import history from '../ui/components/history';
+import Profile from '../ui/components/Profile';
 
 const authenticatedPages = ['/dashboard'];
 const unAuthenticatedPages = ['/', '/signup'];
@@ -30,6 +31,7 @@ export const routes = (
       <Route exact path="/" component={Login}/>
       <Route path="/signup" component={Signup}/>
       <Route path="/dashboard" component={Dashboard}/>
+      <Route path="/profile" component={Profile}/>
       <Route path="*" component={NotFound}/>
     </Switch>
   </Router>
