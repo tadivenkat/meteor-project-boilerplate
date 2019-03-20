@@ -10,6 +10,7 @@ export default class Profile extends React.Component {
     this.state = {
       error: null,
       firstName: null,
+      lastName: null,
       email: null
     }
   }
@@ -23,6 +24,7 @@ export default class Profile extends React.Component {
         } else {
           this.setState({
             firstName: resp.profile.firstName,
+            lastName: resp.profile.lastName,
             email: resp.emails[0].address
           });
         }
@@ -36,7 +38,7 @@ export default class Profile extends React.Component {
       <div>
           <h1>Your Profile</h1>
           {this.state.error ? <p>{this.state.error}</p> : null}
-          <p>{this.state.firstName}</p>
+          <p>{this.state.firstName}, {this.state.lastName}</p>
           <p>{this.state.email}</p>
       </div>
     );
